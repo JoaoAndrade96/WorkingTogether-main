@@ -23,7 +23,7 @@
 
     <div class="d-flex">
         <div>
-            <img src="\assets\images\Vectors Illustration Pack (Community)\Sample 38.png" alt="pessoa saindo de dentro do celular" width="600" height="480">
+            <img src="/assets/images/vectors/Sample 38.png" alt="pessoa saindo de dentro do celular" width="600" height="480">
         </div>
 
         <div class="d-flex flex-wrap">
@@ -49,7 +49,7 @@
 
         <div class="d-flex">
             <div>
-                <img src="\assets\images\Vectors Illustration Pack (Community)\Sample 27 copy.png" alt="mulher sentada numa cadeira e uma mulher saindo de dentro do celular" width="600" height="480">
+                <img src="/assets/images/vectors/Sample 27 copy.png" alt="mulher sentada numa cadeira e uma mulher saindo de dentro do celular" width="600" height="480">
             </div>
 
             <div class="d-flex flex-wrap">

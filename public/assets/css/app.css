@@ -596,6 +596,10 @@ nav.navbar {
     width: 50vh;
     height: 35vh;
     cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.cardvagas:hover {
     border: 2px solid;
     border-color: #546E7A;
 }
@@ -606,19 +610,32 @@ nav.navbar {
     cursor: pointer;
 }
 
+.cardvagaswelcome:hover {
+    border: 2px solid;
+    border-color: #546E7A;
+}
+
 .cardempresas {
     width: 40vh;
     height: 30vh;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.cardempresas:hover {
     border: 2px solid;
     border-color: #546E7A;
-    cursor: pointer;
-    
 }
 
 .cardempresasinicio {
     width: 40vh;
     height: 20vh;
     cursor: pointer;
+}
+
+.cardempresasinicio:hover {
+    border: 2px solid;
+    border-color: #546E7A;
 }
 
 .logoimages {
@@ -629,4 +646,32 @@ nav.navbar {
 .logocard {
     max-width: 35vh;
     max-height: 15vh;
+}
+
+.formempresas input {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+}
+
+.formusuarios {
+    margin-top: 5vh; margin-left: 15vh;
+}
+
+.formusuarios input {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+}
+
+.textlogin {
+    margin-top: 5vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;500;800&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
 }
