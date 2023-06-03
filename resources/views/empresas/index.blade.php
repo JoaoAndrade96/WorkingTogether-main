@@ -22,7 +22,7 @@
                 <div class="card-body text-center">
                     <div class="my-2">
                         <img class="logoimages img-fluid" src="{{Voyager::image($empresa->logo)}}" alt="logo empresa">
-                        <img class="logoimages img-fluid" src="{{$empresa?->logo}}" alt="logo empresa">
+                        <!-- <img class="logoimages img-fluid" src="{{$empresa?->logo}}" alt="logo empresa"> -->
                     </div>
                     <h5 class="card-title">{{$empresa->nome}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Essa empresa possui: {{$empresa?->vagas?->count()}}  vagas.</h6>

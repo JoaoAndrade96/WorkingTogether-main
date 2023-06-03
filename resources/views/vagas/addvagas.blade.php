@@ -1,32 +1,56 @@
 @extends('layouts.app')
 @section('conteudo')
 
-<section>
-    <div class="d-flex justify-content-center">
+<div class="textlogin text-center">
+    <h4>As vagas que você postar aparecerão para toda a nossa comunidade!</h4>
+</div>
+
+<section class="d-flex py-5">
+    <div class="ms-5 ps-5">
+        <img src="/assets/images/vectors/Devices-cuate.png" alt="imagem ilustrativa" width="650" height="650">
+    </div>
+
+    <div class="formusuarios d-flex"">
         <form method="post" action="{{route('salvarvaga')}}"> <!-- Essas rotas ficam na api.php -->
             @csrf
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Nome da Vaga:</label>
+                <input class="form-control" type="text" id="nome" name="nome" required>
+            </div>
 
-            <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" name="descricao" required><br><br>
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Descrição:</label>
+                <input class="form-control" type="text" id="descricao" name="descricao" required>
+            </div>
 
-            <label for="requisitos">Requisitos:</label>
-            <input type="text" id="requisitos" name="requisitos" required><br><br>
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Requisitos:</label>
+                <input class="form-control" type="text" id="requisitos" name="requisitos" required>
+            </div>
 
-            <label for="salario">Salário</label>
-            <input type="text" id="salario" name="salario" required><br><br>
-            
-            <label for="cargo">Cargo</label>
-            <input type="text" id="cargo" name="cargo" required><br><br>
-            
-            <label for="experiencias">Experiências</label>
-            <input type="text" id="experiencias" name="experiencias" required><br><br>
-            
-            <label for="beneficios">Beneficíos</label>
-            <input type="text" id="beneficios" name="beneficios" required><br><br>
-            
-            <button type="submit">Submit</button>
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Salário</label>
+                <input class="form-control" type="text" id="salario" name="salario" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Cargo</label>
+                <input class="form-control" type="text" id="cargo" name="cargo" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Experiências</label>
+                <input class="form-control" type="text" id="experiencias" name="experiencias" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Beneficíos</label>
+                <input class="form-control" type="text" id="beneficios" name="beneficios" required>
+            </div>
+
+            <div class="mb-4 text-center">
+                <button type="submit" class="btn btn-lg text-white" style="background-color:#546E7A" >Publicar a Vaga!</button>
+            </div>
         </form>
     </div>
 </section>

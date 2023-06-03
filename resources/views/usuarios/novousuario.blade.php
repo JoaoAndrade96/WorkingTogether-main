@@ -8,7 +8,7 @@
 
 <section class="d-flex py-5">
     <div class="ms-5 ps-5">
-        <img src="/assets/images/vectors/Business deal-amico.png" alt="iamgem ilustrativa" width="500" height="500">
+        <img src="/assets/images/vectors/Business deal-amico.png" alt="imagem ilustrativa" width="500" height="500">
     </div>
 
     <div class="formusuarios d-flex">
