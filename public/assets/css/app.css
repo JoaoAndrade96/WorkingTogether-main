@@ -637,6 +637,11 @@ nav.navbar {
     border: 2px solid;
     border-color: #546E7A;
 }
+/* 
+.card-descricao {
+   max-width: 50rem;
+   max-height: 15rem;
+} */
 
 .logoimages {
     max-width: 35vh;

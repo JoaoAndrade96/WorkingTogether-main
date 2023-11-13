@@ -84,7 +84,7 @@ class VagaController extends Controller
             ], 202);
         } else {
             return response()->json([
-                "message" => "tiposemprego not found"
+                "message" => "vaga not found"
             ], 404);
         }
     }

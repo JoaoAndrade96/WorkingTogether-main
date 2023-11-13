@@ -33,11 +33,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('students', 'App\Http\Controllers\ApiController@getAllStudents');
-Route::get('students/{id}', 'App\Http\Controllers\ApiController@getStudent');
+Route::get('usuarios', 'App\Http\Controllers\ApiController@getAllUsers');
+Route::get('usuarios/{id}', 'App\Http\Controllers\ApiController@getUsers');
 Route::post('usuarios', 'App\Http\Controllers\UserController@createCadastro')->name('salvarusuario');
-Route::put('students/{id}', 'App\Http\Controllers\ApiController@updateStudent');
-Route::delete('students/{id}', 'App\Http\Controllers\ApiController@deleteStudent');
+Route::put('usuarios/{id}', 'App\Http\Controllers\ApiController@updateUsers');
+Route::delete('usuarios/{id}', 'App\Http\Controllers\ApiController@deleteUsers');
 
 Route::get('empresas', 'App\Http\Controllers\EmpresaController@getAllEmpresas');
 Route::get('empresas/{id}', 'App\Http\Controllers\EmpresaController@getEmpresa');
@@ -104,3 +104,9 @@ Route::get('vagas/{id}', 'App\Http\Controllers\VagaController@getVaga');
 Route::post('vagas', 'App\Http\Controllers\VagaController@createVaga')->name('salvarvaga');
 Route::put('vagas/{id}', 'App\Http\Controllers\VagaController@updateVaga');
 Route::delete('vagas/{id}', 'App\Http\Controllers\VagaController@deleteVaga');
+
+Route::get('candidatos', 'App\Http\Controllers\CandidatoController@getAllCandidato');
+Route::get('candidatos/{id}', 'App\Http\Controllers\CandidatoController@getCandidato');
+Route::post('candidatos', 'App\Http\Controllers\CandidatoController@createCandidato');
+Route::put('candidatos/{id}', 'App\Http\Controllers\CandidatoController@updateCandidato');
+Route::delete('candidatos/{id}', 'App\Http\Controllers\CandidatoController@deleteCandidato');

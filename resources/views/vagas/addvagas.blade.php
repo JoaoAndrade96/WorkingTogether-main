@@ -10,7 +10,7 @@
         <img src="/assets/images/vectors/Devices-cuate.png" alt="imagem ilustrativa" width="650" height="650">
     </div>
 
-    <div class="formusuarios d-flex"">
+    <div class="formusuarios d-flex">
         <form method="post" action="{{route('salvarvaga')}}"> <!-- Essas rotas ficam na api.php -->
             @csrf
             <div class="mb-4">

@@ -54,7 +54,7 @@
                 <label for="formGroupExampleInput" class="form-label">Descrição da Empresa:</label>
                 <textarea class="form-control exampleFormControlTextarea1" id="descricao" rows="3" name="descricao" required></textarea>
               </div>
-            </div>
+            </div>-
 
             <div class="d-flex justify-content-center my-3">
               <button type="submit" class="btn btn-lg text-white" style="background-color:#546E7A" >Cadastrar-me</button>
