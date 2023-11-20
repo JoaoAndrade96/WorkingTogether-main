@@ -71,15 +71,28 @@ class CandidatoController extends Controller
         }
     }
 
+    /* Relacionamentos */
+    public function vaga()
+    {
+        return $this->belongsTo(Vaga::class);
+    }
+
     /* Views */
-    public function candidatarseVaga(){
+    public function candidatarseVaga()
+    {
         $candidatos = Candidato::all();
         return view('candidatos.candidatarse', compact('candidatos'));
     }
 
-    public function listarCandidatos(){
-        $candidatos = Candidato::all();
-        $vagas = Vaga::all();
+    public function listarCandidatosParaVaga()
+    {
+        $candidatos = Candidato::where('vaga_id', $vagaId)->with('vaga')->get();
+        $vaga = Vaga::find($vagaId);
+
+        if (!$vaga) {
+            abort(404, 'Vaga não encontrada');
+        }
+
         return view('candidatos.candidatos', compact('candidatos', 'vagas'));
     }
 }

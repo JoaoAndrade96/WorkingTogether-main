@@ -30,7 +30,7 @@ Route::get('/empresas', [App\Http\Controllers\EmpresaController::class, 'listarE
 Route::get('/adicionarempresas', [App\Http\Controllers\EmpresaController::class, 'adicionarempresas'])->name('adicionarempresas');
 
 Route::get('/candidatarse', [App\Http\Controllers\CandidatoController::class, 'candidatarseVaga'])->name('candidatarse');
-Route::get('/candidatos', [App\Http\Controllers\CandidatoController::class, 'listarCandidatos'])->name('candidatos');
+Route::get('/candidatos', [App\Http\Controllers\CandidatoController::class, 'listarCandidatosParaVaga'])->name('candidatos');
 
 Route::get('/cadastro', [App\Http\Controllers\UserController::class, 'cadastro'])->name('cadastro');;
 
