@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Candidato;
+use App\Models\Vaga;
 use Illuminate\Http\Request;
 
 class CandidatoController extends Controller
@@ -68,5 +69,17 @@ class CandidatoController extends Controller
                 "message" => "candidato not found"
             ], 404);
         }
+    }
+
+    /* Views */
+    public function candidatarseVaga(){
+        $candidatos = Candidato::all();
+        return view('candidatos.candidatarse', compact('candidatos'));
+    }
+
+    public function listarCandidatos(){
+        $candidatos = Candidato::all();
+        $vagas = Vaga::all();
+        return view('candidatos.candidatos', compact('candidatos', 'vagas'));
     }
 }

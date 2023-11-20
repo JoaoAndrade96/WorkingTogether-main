@@ -13,8 +13,7 @@
   <hr class="border border-2 border border-dark ms-5 me-5">
 </section>
 
-<section>
-        
+<section>  
         <!-- Card -->
         <div class="d-flex flex-wrap justify-content-center">
             @forelse($vagas as $vaga)
@@ -51,7 +50,7 @@
 
                                 <h6 class="card-subtitle mb-2 text-muted">@isset($vaga?->tiposemprego?->nome)<span>{{$vaga?->tiposemprego?->nome}}</span>@endisset</h6>
 
-                                <h6 class="card-subtitle mb-2 text-muted">@isset($vaga?->empresa?->endereco?->rua)<span>{{$vaga?->empresa?->endereco?->rua}}</span>,@endisset<span>{{$vaga?->empresa?->endereco?->numero}}</span>
+                                <h6 class="card-subtitle mb-2 text-muted">@isset($vaga?->empresa?->endereco?->rua)<span>{{$vaga?->empresa?->endereco?->rua}}</span>,@endisset<span>{{$vaga?->empresa?->endereco?->numero}}</span></h6>
 
                                 <h6 class="card-subtitle mb-2 text-muted">@isset($vaga?->empresa?->cidade?->nome)<span>{{$vaga?->empresa?->cidade?->nome}}</span>,@endisset<span>{{$vaga?->empresa?->cidade?->estado?->nome}}</span></h6>
                                 

@@ -29,6 +29,9 @@ Route::get('/adicionarvagas', [App\Http\Controllers\VagaController::class, 'adic
 Route::get('/empresas', [App\Http\Controllers\EmpresaController::class, 'listarEmpresas'])->name('empresas');
 Route::get('/adicionarempresas', [App\Http\Controllers\EmpresaController::class, 'adicionarempresas'])->name('adicionarempresas');
 
+Route::get('/candidatarse', [App\Http\Controllers\CandidatoController::class, 'candidatarseVaga'])->name('candidatarse');
+Route::get('/candidatos', [App\Http\Controllers\CandidatoController::class, 'listarCandidatos'])->name('candidatos');
+
 Route::get('/cadastro', [App\Http\Controllers\UserController::class, 'cadastro'])->name('cadastro');;
 
 Route::group(['prefix' => 'admin'], function () {

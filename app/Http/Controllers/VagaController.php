@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CategoriasVaga;
 use App\Models\Empresa;
+use App\Models\Candidato;
 use App\Models\Vaga;
 use Illuminate\Http\Request;
 
