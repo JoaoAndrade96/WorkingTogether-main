@@ -31,9 +31,9 @@ class VagaController extends Controller
         $vaga->image = $request->image;
         $vaga->save();
 
-        return response()->json([
-            "message" => "vaga record created"
-        ], 201);
+        $vagas = Vaga::all();
+        $categorias = CategoriasVaga::all();
+        return view('vagas.index', compact('categorias', 'vagas'));
     }
 
     public function VagaId($id)
@@ -91,13 +91,15 @@ class VagaController extends Controller
     }
 
     /* Views */
-    public function listarVagas(){
+    public function listarVagas()
+    {
         $vagas = Vaga::all();
         $categorias = CategoriasVaga::all();
         return view('vagas.index', compact('categorias', 'vagas'));
     }
 
-    public function adicionarVagas(){
+    public function adicionarVagas()
+    {
         $vagas = Vaga::all();
         return view('vagas.addvagas', compact('vagas'));
     }

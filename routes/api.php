@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Student;
 use App\Models\Empresa;
+use App\Models\Candidato;
 use App\Models\CategoriasVaga;
 use App\Models\Cidade;
 use App\Models\Endereco;
@@ -16,6 +17,7 @@ use App\Models\SetoresEmprego;
 use App\Models\TiposEmprego;
 use App\Models\User;
 use App\Models\Vaga;
+
 
 
 /*
@@ -107,6 +109,8 @@ Route::delete('vagas/{id}', 'App\Http\Controllers\VagaController@deleteVaga');
 
 Route::get('candidatos', 'App\Http\Controllers\CandidatoController@getAllCandidato');
 Route::get('candidatos/{id}', 'App\Http\Controllers\CandidatoController@getCandidato');
-Route::post('candidatos', 'App\Http\Controllers\CandidatoController@createCandidato');
+Route::post('candidatos', 'App\Http\Controllers\CandidatoController@createCandidato')->name('salvarcandidato');
 Route::put('candidatos/{id}', 'App\Http\Controllers\CandidatoController@updateCandidato');
 Route::delete('candidatos/{id}', 'App\Http\Controllers\CandidatoController@deleteCandidato');
+
+Route::get('/listar-candidatos/{vagaId}', 'CandidatoController@listarCandidatosParaVaga');

@@ -17,7 +17,9 @@ class CandidatoController extends Controller
     public function createCandidato(Request $request)
     {
         $candidato = new Candidato;
-        $candidato->nome = $request->nome;
+        $candidato->nome_sobrenome = $request->nome_sobrenome;
+        $candidato->email = $request->email;
+        $candidato->telefone = $request->telefone;
         $candidato->save();
 
         return response()->json([
@@ -71,27 +73,18 @@ class CandidatoController extends Controller
         }
     }
 
-    /* Relacionamentos */
-    public function vaga()
-    {
-        return $this->belongsTo(Vaga::class);
-    }
-
     /* Views */
-    public function candidatarseVaga()
+    public function candidatarseVaga($id)
     {
-        $candidatos = Candidato::all();
-        return view('candidatos.candidatarse', compact('candidatos'));
+        $candidatos = Candidato::find(1);
+        $vaga = Vaga::find($id);
+        return view('candidatos.candidatarse', compact('candidatos', 'vaga'));
     }
 
     public function listarCandidatosParaVaga()
     {
-        $candidatos = Candidato::where('vaga_id', $vagaId)->with('vaga')->get();
-        $vaga = Vaga::find($vagaId);
-
-        if (!$vaga) {
-            abort(404, 'Vaga não encontrada');
-        }
+        $candidatos = Candidato::all();
+        $vagas = Vaga::all();
 
         return view('candidatos.candidatos', compact('candidatos', 'vagas'));
     }

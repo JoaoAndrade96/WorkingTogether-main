@@ -681,6 +681,57 @@ nav.navbar {
     margin-top: 5vh;
 }
 
+.container-main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-origin {
+    margin: 0;
+    padding: 5vh;
+    padding-left: 20vh;
+    padding-right: 20vh;
+}
+
+.container-vaga {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 2.2px solid #546E7A;
+    border-radius: 15px;
+    padding: 5vh;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5vh;   
+}
+
+.botao-curriculo {
+    padding: 1vh;
+    padding-top: 1.5vh; 
+    padding-bottom: 1.5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    border: 2px solid #546E7A;
+    background-color: #546E7A;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;500;800&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 * {

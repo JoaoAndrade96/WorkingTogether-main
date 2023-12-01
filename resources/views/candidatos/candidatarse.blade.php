@@ -11,30 +11,36 @@
     </div>
 
     <div class="formusuarios d-flex">
-        <form method="post" action="{{route('salvarvaga')}}"> <!-- Essas rotas ficam na api.php -->
+        <form method="post" action="{{route('salvarcandidato')}}"> <!-- Essas rotas ficam na api.php -->
             @csrf
             <div class="mb-4">
                 <label for="formGroupExampleInput" class="form-label">Nome e Sobrenome:</label>
-                <input class="form-control" type="text" id="nome" name="nome" required>
+                <input class="form-control" type="text" id="nome_sobrenome" name="nome_sobrenome" value="{{$candidatos->nome_sobrenome}}" required>
             </div>
 
             <div class="mb-4">
                 <label for="formGroupExampleInput" class="form-label">Email:</label>
-                <input class="form-control" type="text" id="descricao" name="descricao" required>
+                <input class="form-control" type="text" id="email" name="email" value="{{$candidatos->email}}" required>
             </div>
 
             <div class="mb-4">
+                <label for="formGroupExampleInput" class="form-label">Vaga:</label>
+                <input class="form-control" type="text" id="email" name="email" value="{{$vaga->nome}}" required>
+            </div>
+
+
+            <div class="mb-4">
                 <label for="formGroupExampleInput" class="form-label">Telefone:</label>
-                <input class="form-control" type="text" id="requisitos" name="requisitos" required>
+                <input class="form-control" type="text" id="telefone" name="telefone" value="{{$candidatos->telefone}}" required>
             </div>
 
             <div class="mb-3">
                 <label label for="formFile" class="form-label">Envie seu Currículo!</label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="curriculo" name="curriculo" required>
             </div>
 
             <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-lg text-white" style="background-color:#546E7A" >Publicar a Vaga!</button>
+                <button type="submit" class="btn btn-lg text-white" style="background-color:#546E7A">Publicar a Vaga!</button>
             </div>
         </form>
     </div>

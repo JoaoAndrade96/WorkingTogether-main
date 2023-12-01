@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VagaController;
 
 use App\Models\Empresa;
+use App\Models\Candidato;
 use App\Models\Vaga;
 
 /*
@@ -20,7 +21,7 @@ use App\Models\Vaga;
 Route::get('/', function () {
     $vagas = Vaga::all()->take(6);
     $empresas = Empresa::all()->take(6);
-    return view('welcome', compact('empresas', 'vagas'));  
+    return view('welcome', compact('empresas', 'vagas'));
 })->name('welcome');
 
 Route::get('/vagas', [App\Http\Controllers\VagaController::class, 'listarVagas'])->name('vagas');
@@ -29,7 +30,7 @@ Route::get('/adicionarvagas', [App\Http\Controllers\VagaController::class, 'adic
 Route::get('/empresas', [App\Http\Controllers\EmpresaController::class, 'listarEmpresas'])->name('empresas');
 Route::get('/adicionarempresas', [App\Http\Controllers\EmpresaController::class, 'adicionarempresas'])->name('adicionarempresas');
 
-Route::get('/candidatarse', [App\Http\Controllers\CandidatoController::class, 'candidatarseVaga'])->name('candidatarse');
+Route::get('/candidatarse/{id}', [App\Http\Controllers\CandidatoController::class, 'candidatarseVaga'])->name('candidatarse');
 Route::get('/candidatos', [App\Http\Controllers\CandidatoController::class, 'listarCandidatosParaVaga'])->name('candidatos');
 
 Route::get('/cadastro', [App\Http\Controllers\UserController::class, 'cadastro'])->name('cadastro');;
